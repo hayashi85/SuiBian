@@ -1,0 +1,24 @@
+﻿<ion-view view-title="Category">
+    <ion-nav-buttons side="left">
+        <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="row">
+            <div class="col col-50"><img style="width:100%;" src="http://localhost/Ybook/media/img/beauty.png" /></div>
+            <div class="col col-50"><img style="width:100%;" src="http://localhost/Ybook/media/img/cleaner.jpg" /></div>
+        </div>
+        <div class="row">
+            <div class="col col-100"><img style="width:100%;" src="http://localhost/Ybook/media/img/aircond.jpg" /></div>
+        </div>
+        <div class="row">
+            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/catering.jpg" /></div>
+            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/massage.jpg" /></div>
+            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/gardening.jpg" /></div>
+        </div>
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="category in categories" href="#/tab/home/{{category.id}}">
+                <p>{{category.name}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+﻿<ion-view view-title="Home">
+    <ion-nav-buttons side="left">
+        <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="wide-as-needed">
+            <a href="#/tab/home"><img src="http://localhost/img/flower1.jpg"></a>
+            <img src="http://localhost/img/flower2.jpg">
+            <img src="http://localhost/img/flower3.jpg">
+            <img src="http://localhost/img/flower1.jpg">
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="service in services" href="#/tab/chats/{{service.id}}">
+                <div class="row">
+                    <div class="col col-25"><img class="list-image" ng-src="{{service.face}}"></div>
+                    <div class="col col-50"><h2>{{service.companyName}}</h2><p>{{service.tag}}</p><p>{{service.service}}</p></div>
+                    <div class="col col-25" style="text-align:end;">{{service.promoPrice}}<br>{{service.price}}<br>{{service.distance}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

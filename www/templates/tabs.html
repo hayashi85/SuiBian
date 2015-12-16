@@ -1,0 +1,47 @@
+<!--
+Create tabs with an icon and label, using the tabs-stable style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+    
+        <ion-side-menus>
+            <ion-side-menu-content>
+                <ion-tabs class="tabs-icon-top tabs-stable">
+
+                    <!-- Category Tab -->
+                    <ion-tab title="Category" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/category">
+                        <ion-nav-view name="tab-category"></ion-nav-view>
+                    </ion-tab>
+
+                    <!-- Home Tab -->
+                    <ion-tab title="Home" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/home">
+                        <ion-nav-view name="tab-home"></ion-nav-view>
+                    </ion-tab>
+
+                    <!-- Filter Tab -->
+                    <ion-tab title="Filter" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/filter">
+                        <ion-nav-view name="tab-filter"></ion-nav-view>
+                    </ion-tab>
+
+
+                </ion-tabs>
+            </ion-side-menu-content>
+            <ion-content>
+                <ion-side-menu side="left">
+                    <ion-list>
+                        <ion-item href="#/menu">Home</ion-item>
+                    </ion-list>
+                    <ion-list>
+                        <ion-item href="#/geomap">Map</ion-item>
+                    </ion-list>
+                    <ion-list>
+                        <ion-item href="#/about">About</ion-item>
+                    </ion-list>
+                    <ion-list>
+                        <ion-item href="#/logout">Logout</ion-item>
+                    </ion-list>
+                </ion-side-menu>
+            </ion-content>
+        </ion-side-menus>
+

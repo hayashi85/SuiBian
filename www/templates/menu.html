@@ -1,0 +1,24 @@
+﻿<ion-view>
+    <ion-nav-buttons side="left">
+        <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" scroll="false">
+        <ion-side-menus>
+            <ion-side-menu-content title="Main Content" class="padding">
+                <a class="button button-block button-positive" href="#/scan">Check In</a>
+                <a class="button button-block button-positive" href="#/scan">Check Out</a>
+            </ion-side-menu-content>
+            <ion-side-menu side="left">
+                <ion-list>
+                    <ion-item href="#/menu">Home</ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item href="#/geomap">Map</ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item href="#/about">About</ion-item>
+                </ion-list>
+            </ion-side-menu>
+        </ion-side-menus>
+    </ion-content>
+</ion-view>
