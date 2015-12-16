@@ -22,7 +22,7 @@ modules.push('starter.controller.menu');
 modules.push('starter.controller.geomap');
 modules.push('starter.controller.tab.home');
 modules.push('starter.controller.tab.category');
-modules.push('starter.controller.tab.filter');
+modules.push('starter.controller.tab.filter2');
 
 
 // append services here
