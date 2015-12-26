@@ -3,13 +3,18 @@
         <form ng-submit="submit()">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Username">
+                    <input type="text" name="username" ng-model="data.username" placeholder="Username">
                 </label>
                 <label class="item item-input">
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password" ng-model="data.password" placeholder="Password">
                 </label>
             </div>
             <input class="button button-block button-positive" type="submit" name="submit" value="LOG IN">
         </form>
-</ion-content>
+        <div class="card" ng-show="showError">
+            <div class="item item-text-wrap">
+                <b ng-bind="errorMessage" class="assertive"></b>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

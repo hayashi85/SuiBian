@@ -22,7 +22,7 @@ modules.push('starter.controller.menu');
 modules.push('starter.controller.geomap');
 modules.push('starter.controller.tab.home');
 modules.push('starter.controller.tab.category');
-modules.push('starter.controller.tab.filter2');
+modules.push('starter.controller.tab.filter');
 
 
 // append services here
@@ -31,6 +31,7 @@ modules.push('starter.service.users');
 modules.push('starter.service.camera');
 modules.push('starter.service.services');
 modules.push('starter.service.categories');
+modules.push('starter.service.api');
 
 angular.module('starter', modules)
 

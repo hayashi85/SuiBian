@@ -31,6 +31,7 @@ modules.push('starter.service.users');
 modules.push('starter.service.camera');
 modules.push('starter.service.services');
 modules.push('starter.service.categories');
+modules.push('starter.service.api');
 
 angular.module('starter', modules)
 
