@@ -1,20 +1,26 @@
 ﻿angular.module('starter.controller.tab.home', [])
 
-.controller('TabHomeCtrl', function ($scope, $state, $stateParams, $ionicSideMenuDelegate, Services) {
-    if (window.localStorage['username'] == '' || window.localStorage['username'] == null) {
-        $state.go('login');
-    } else {
-        alert('Username : ' + window.localStorage['username'] + '\nToken : ' + window.localStorage['token']);
+.controller('TabHomeCtrl', function ($scope, $state, $stateParams, $http, $ionicSideMenuDelegate) {
+
+    var link = 'http://www.reachthecustomer.com/ServiceBooking/api.php';
+
+    if (window.localStorage['username'] != null && window.localStorage['token'] != null) {
+        $http.post(link, { action: 'validate', username: window.localStorage['username'], token: window.localStorage['token'] }).then(function (res) {
+            if (res.data.status == 'successful') {
+                $http.post(link, { action: 'getAdsService', condition: '' }).then(function (res) {
+                    $scope.adsServices = res.data;
+                });
+                $http.post(link, { action: 'getService', condition: '' }).then(function (res) {
+                    $scope.services = res.data;
+                });
+            } else {
+                window.localStorage['username'] = '';
+                window.localStorage['token'] = '';
+                $state.go('login');
+            }
+        });
     }
-    
-    if ($stateParams.categoryId) {
-        // add filter by category here
-        $stateParams.categoryId;
-    }
-    $scope.services = Services.all();
-    $scope.remove = function (service) {
-        Services.remove(service);
-    }
+
     $scope.toggleLeft = function () {
         $ionicSideMenuDelegate.toggleLeft();
     }

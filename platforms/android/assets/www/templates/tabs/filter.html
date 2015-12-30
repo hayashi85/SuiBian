@@ -2,6 +2,43 @@
     <ion-nav-buttons side="left">
         <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
     </ion-nav-buttons>
-    <ion-content>
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-divider">
+                Sort {{ data.sortingOption }}
+            </div>
+            <ion-radio ng-repeat="item in sortingOptionList"
+                       ng-value="item.value"
+                       ng-model="data.sortingOption"
+                       ng-change="sortingOptionChange(item)"
+                       name="sorting-option">
+                {{ item.text }}
+            </ion-radio>
+
+            <div class="item item-divider">
+                Service Type {{ data.serviceTypeOption }}
+            </div>
+            <ion-radio ng-repeat="item in serviceTypeOptionList"
+                       ng-value="item.value"
+                       ng-model="data.serviceTypeOption"
+                       ng-change="serviceTypeOptionChange(item)"
+                       name="service-type-option">
+                {{ item.text }}
+            </ion-radio>
+
+            <div class="item item-divider">
+                Area {{ data.areaOption }}
+            </div>
+            <ion-radio ng-repeat="item in areaOptionList"
+                       ng-value="item.value"
+                       ng-model="data.areaOption"
+                       ng-change="areaOptionChange(item)"
+                       name="area-option">
+                {{ item.text }}
+            </ion-radio>
+        </div>
+        <button class="button button-block button-balanced">
+            + Add Address
+        </button>
     </ion-content>
 </ion-view>

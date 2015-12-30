@@ -1,25 +1,8 @@
 ﻿angular.module('starter.service.categories', [])
 
-.factory('Categories', function ($http) {
-    // Might use a resource here that returns a JSON array
+.factory('Categories', function () {
 
-    // Some fake testing data
-    //var categories = [{
-    //    id: 0,
-    //    name: 'Electrical'
-    //}, {
-    //    id: 1,
-    //    name: 'Entertainment'
-    //}, {
-    //    id: 2,
-    //    name: 'Others'
-    //}];
-    var link = 'http://localhost/ServiceBooking/api.php';
     var categories;
-
-    $http.post(link, { action: 'getCategory' }).then(function (res) {
-        categories = res.data;
-    });
 
     return {
         all: function () {

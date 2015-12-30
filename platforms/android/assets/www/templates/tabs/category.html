@@ -3,21 +3,11 @@
         <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
     </ion-nav-buttons>
     <ion-content>
-        <div class="row">
-            <!--<div class="col col-50"><img style="width:100%;" src="http://localhost/Ybook/media/img/{{cat1.img}}" /></div>-->
-            <div class="col col-50"><img style="width:100%;" src="http://localhost/Ybook/media/img/cleaner.jpg" /></div>
-        </div>
-        <div class="row">
-            <div class="col col-100"><img style="width:100%;" src="http://localhost/Ybook/media/img/aircond.jpg" /></div>
-        </div>
-        <div class="row">
-            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/catering.jpg" /></div>
-            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/massage.jpg" /></div>
-            <div class="col col-33"><img style="width:100%;" src="http://localhost/Ybook/media/img/gardening.jpg" /></div>
-        </div>
         <ion-list>
-            <ion-item class="item-avatar" ng-repeat="category in categories" href="#/tab/home/{{category.id}}">
-                <p>{{category.name}}</p>
+            <ion-item class="item-avatar" ng-repeat="category in categories" ng-click="filterCategory({{category.id}})">
+                <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/category/{{category.img}}">
+                <h2>{{category.name}}</h2>
+                <p>{{category.desc}}</p>
             </ion-item>
         </ion-list>
     </ion-content>

@@ -4,19 +4,40 @@
     </ion-nav-buttons>
     <ion-content>
         <div class="wide-as-needed">
-            <a href="#/tab/home"><img src="http://localhost/img/flower1.jpg"></a>
-            <img src="http://localhost/img/flower2.jpg">
-            <img src="http://localhost/img/flower3.jpg">
-            <img src="http://localhost/img/flower1.jpg">
+            <a href="#" ng-repeat="adsService in adsServices"><img src="http://www.reachthecustomer.com/ServiceBooking/media/img/service/{{adsService.img}}"></a>
         </div>
         <ion-list>
-            <ion-item ng-repeat="service in services" href="#/tab/chats/{{service.id}}">
-                <div class="row">
-                    <div class="col col-25"><img class="list-image" ng-src="{{service.face}}"></div>
-                    <div class="col col-50"><h2>{{service.companyName}}</h2><p>{{service.tag}}</p><p>{{service.service}}</p></div>
-                    <div class="col col-25" style="text-align:end;">{{service.promoPrice}}<br>{{service.price}}<br>{{service.distance}}</div>
+            <a ng-repeat="service in services" class="item item-thumbnail-left services-grid" href="#">
+                <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/service/{{service.img}}">
+                <div class="row service-header">
+                    <div class="col"><h2>{{service.venName}}</h2></div>
                 </div>
-            </ion-item>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="row">
+                            <div class="col"><p>{{service.catName}}</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><p>{{service.name}}</p></div>
+                        </div>
+                    </div>
+                    <div class="col col-50 align-end">
+                        <div class="row">
+                            <div class="col"><h2>RM {{service.dcPrice}}</h2></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><p><font class="strikethrough">RM {{service.price}}</font></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row service-footer">
+                    <div class="col align-end"><p><i class="ion-location icon" style="vertical-align: text-top;"></i>&nbsp;&nbsp;{{service.venLoc}}</p></div>
+                </div>
+                <div style="position: relative;top:-20px;left:-42px;width:0px !important;height:0px !important;">
+                    <img style="width:35px;height:35px;" src="http://www.reachthecustomer.com/ServiceBooking/media/img/rating.png">
+                </div>
+                <div style="position: relative;top:-11px;left:-34px; width:0px !important;height:0px !important; z-index:9999; font-size:13px; color:#313131">4.8</div>
+            </a>
         </ion-list>
     </ion-content>
 </ion-view>
