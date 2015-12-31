@@ -5,6 +5,49 @@
     <ion-content class="padding">
         <div class="list card">
 
+            <div>
+                <ion-item class="item-stable"
+                          ng-click="toggleGroup(group)"
+                          ng-class="{active: isGroupShown(group)}">
+                    <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+                    &nbsp;
+                    Group
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(group)">
+                    Detail 1
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(group)">
+                    Detail 2
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(group)">
+                    Detail 3
+                </ion-item>
+            </div>
+            <div>
+                <ion-item class="item-stable"
+                          ng-click="toggleGroup(team)"
+                          ng-class="{active: isGroupShown(team)}">
+                    <i class="icon" ng-class="isGroupShown(team) ? 'ion-minus' : 'ion-plus'"></i>
+                    &nbsp;
+                    Group
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(team)">
+                    Detail 1
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(team)">
+                    Detail 2
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-show="isGroupShown(team)">
+                    Detail 3
+                </ion-item>
+            </div>
+
             <div class="item item-avatar item-button-right">
                 <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/sample/company_logo.png">
                 <h2>Company Name</h2>
