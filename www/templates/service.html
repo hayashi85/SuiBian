@@ -1,0 +1,164 @@
+﻿<ion-view view-title="Service Information">
+    <ion-nav-buttons side="left">
+        <button class="button icon button-clear ion-arrow-left-c" ng-click="routeBack()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list card">
+
+            <div class="item item-avatar item-button-right">
+                <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/sample/company_logo.png">
+                <h2>Company Name</h2>
+                <p>Based in Puchong, the air-conditioning maintenance enterprise provides its services to a multitude of locations in Klang Valley, including Petaling Jaya, Shah Alam, and Subang Jaya.</p>
+                <button class="button" ng-click="viewCompanyDetail()">
+                    <i class="icon ion-ios-information-outline"></i>
+                </button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>Service Name</h2>
+                <p>- Aircon Service 1hp. (1 unit)</p>
+                <p>- Aircon Service 2hp (1 unit)</p>
+                <button class="button" ng-click="editServiceItem()">
+                    <i class="icon ion-edit"></i>
+                </button>
+            </div>
+
+            <div class="item item-body">
+                <h2>Package includes</h2>
+                <p>
+                    - Indoor unit cleaning
+                </p>
+                <p>
+                    - Filter checking and cleaning
+                </p>
+                <p>
+                    - Blower checking and cleaning
+                </p>
+                <p>
+                    - Fan bearing checking
+                </p>
+                <p>
+                    - Gas checking and top-up
+                </p>
+                <p>
+                    - Evaporator coil cleaning
+                </p>
+                <p>
+                    - Drainage flushing
+                </p>
+                <p>
+                    - System test run
+                </p>
+                <p>
+                    - Anti-bacterial mist cleaning
+                </p>
+                <p>
+                    - Service report
+                </p>
+                <p>
+                    Valid for wall-mounted, non-inverter air-conditioners rated 1.0 – 1.5 HP only. Replacement parts not included. If required, call to enquire.
+                </p>
+            </div>
+
+            <div class="item item-avatar item-button-right">
+                <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/sample/profile_photo.png">
+                <h2>Johnny Depp [default all]</h2>
+                <p>Company Name</p>
+                <button class="button" ng-click="selectAdvisor()">
+                    <i class="icon ion-edit"></i>
+                </button>
+            </div>
+
+            <div class="item">
+                <h2>Coverage Area</h2>
+                <p><i class="icon ion-checkmark-circled balanced"></i>&nbsp;&nbsp;<font class="royal">[No 42]</font> Lorong Batu Nilam 31A</p>
+            </div>
+            <div class="item item-image">
+                <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/sample/user_location.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="item" style="padding:0px;">
+                <div class="row" style="padding:0px;">
+                    <div class="col col-25" style="background:#eee; cursor:pointer; text-align: center;"><p>Feb 12</p><p>RM100.00</p></div>
+                    <div class="col col-50 icon-right item-button-right" style="background:#eee; color:#fff; padding:0px; ">
+                        <div class="row" style="background:#33cd5f; color:#fff; padding:0px;">
+                            <div class="col col-67" style="text-align: center;padding-right:0px;">
+                                Feb 13<br />RM100.00
+                            </div>
+                            <div class="col col-33" style="padding-left:0px;">
+                                <button class="button button-balanced" ng-click="showDateList()">
+                                    <i class="icon ion-calendar"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-25" style="background:#eee; cursor:pointer; text-align: center;"><p>Feb 14</p><p>RM100.00</p></div>
+                </div>
+            </div>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    09:00 am
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    10:00 am
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM120.00
+                <span class="badge badge-balanced" style="right:12px;">1</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    11:00 am
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    12:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    01:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    02:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    03:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    04:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+            <a class="item item-icon-left" href="#" ng-click="booking()">
+                <font style="color:#666">
+                    <i class="icon ion-clock"></i>
+                    05:00 pm
+                </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM100.00
+                <span class="badge badge-assertive" style="right:12px;">0</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
