@@ -7,7 +7,7 @@ navigation history that also transitions its views in and out.
     
         <ion-side-menus>
             <ion-side-menu-content>
-                <ion-tabs class="tabs-icon-top tabs-stable">
+                <ion-tabs class="tabs-icon-top tabs-stable" ng-controller="TabCtrl">
 
                     <!-- Category Tab -->
                     <ion-tab title="Category" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/category">
@@ -15,7 +15,7 @@ navigation history that also transitions its views in and out.
                     </ion-tab>
 
                     <!-- Home Tab -->
-                    <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/home">
+                    <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/home" ng-click="home()">
                         <ion-nav-view name="tab-home"></ion-nav-view>
                     </ion-tab>
 

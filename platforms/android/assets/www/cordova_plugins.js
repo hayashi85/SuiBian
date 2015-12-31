@@ -3,6 +3,7 @@ module.exports = [
     {
         "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
         "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "pluginId": "org.apache.cordova.splashscreen",
         "clobbers": [
             "navigator.splashscreen"
         ]

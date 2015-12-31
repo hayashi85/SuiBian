@@ -7,18 +7,18 @@
             <a href="#" ng-repeat="adsService in adsServices"><img src="http://www.reachthecustomer.com/ServiceBooking/media/img/service/{{adsService.img}}"></a>
         </div>
         <ion-list>
-            <a ng-repeat="service in services" class="item item-thumbnail-left services-grid" href="#">
+            <a ng-repeat="service in services" class="item item-thumbnail-left services-grid" href="#/service">
                 <img src="http://www.reachthecustomer.com/ServiceBooking/media/img/service/{{service.img}}">
                 <div class="row service-header">
-                    <div class="col"><h2>{{service.venName}}</h2></div>
+                    <div class="col"><h2>{{service.name}}</h2></div>
                 </div>
                 <div class="row">
                     <div class="col col-50">
                         <div class="row">
-                            <div class="col"><p>{{service.catName}}</p></div>
+                            <div class="col"><p>{{service.venName}}</p></div>
                         </div>
                         <div class="row">
-                            <div class="col"><p>{{service.name}}</p></div>
+                            <div class="col"><p>{{service.catName}}</p></div>
                         </div>
                     </div>
                     <div class="col col-50 align-end">

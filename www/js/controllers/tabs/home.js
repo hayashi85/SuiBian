@@ -1,6 +1,6 @@
 ﻿angular.module('starter.controller.tab.home', [])
 
-.controller('TabHomeCtrl', function ($scope, $state, $stateParams, $http, $ionicSideMenuDelegate) {
+.controller('TabHomeCtrl', function ($scope, $state, $stateParams, $http, $ionicSideMenuDelegate, AdsServices, Services) {
 
     var link = 'http://www.reachthecustomer.com/ServiceBooking/api.php';
 
@@ -8,10 +8,12 @@
         $http.post(link, { action: 'validate', username: window.localStorage['username'], token: window.localStorage['token'] }).then(function (res) {
             if (res.data.status == 'successful') {
                 $http.post(link, { action: 'getAdsService', condition: '' }).then(function (res) {
-                    $scope.adsServices = res.data;
+                    AdsServices = res.data;
+                    $scope.adsServices = AdsServices;
                 });
                 $http.post(link, { action: 'getService', condition: '' }).then(function (res) {
-                    $scope.services = res.data;
+                    Services = res.data;
+                    $scope.services = Services;
                 });
             } else {
                 window.localStorage['username'] = '';
@@ -19,7 +21,12 @@
                 $state.go('login');
             }
         });
+    } else {
+        $state.go('login');
     }
+
+    $scope.adsServices = AdsServices;
+    $scope.services = Services;
 
     $scope.toggleLeft = function () {
         $ionicSideMenuDelegate.toggleLeft();

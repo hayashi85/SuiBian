@@ -16,10 +16,17 @@ modules.push('starter.controller.about');
 modules.push('starter.controller.login');
 modules.push('starter.controller.logout');
 modules.push('starter.controller.home');
+modules.push('starter.controller.service');
+modules.push('starter.controller.servicedate');
+modules.push('starter.controller.serviceitem');
+modules.push('starter.controller.serviceadvisor');
+modules.push('starter.controller.companydetail');
+modules.push('starter.controller.booking.confirmation');
 modules.push('starter.controller.scan');
 modules.push('starter.controller.map');
 modules.push('starter.controller.menu');
 modules.push('starter.controller.geomap');
+modules.push('starter.controller.tab');
 modules.push('starter.controller.tab.home');
 modules.push('starter.controller.tab.category');
 modules.push('starter.controller.tab.filter');
@@ -30,6 +37,7 @@ modules.push('starter.services');
 modules.push('starter.service.users');
 modules.push('starter.service.camera');
 modules.push('starter.service.services');
+modules.push('starter.service.ads-services');
 modules.push('starter.service.categories');
 modules.push('starter.service.api');
 
@@ -158,6 +166,42 @@ angular.module('starter', modules)
       url: '/home',
       templateUrl: 'templates/home.html',
       controller: 'HomeCtrl'
+  });
+
+  $stateProvider.state('service', {
+      url: '/service',
+      templateUrl: 'templates/service.html',
+      controller: 'ServiceCtrl'
+  });
+
+  $stateProvider.state('servicedate', {
+      url: '/servicedate',
+      templateUrl: 'templates/service-date.html',
+      controller: 'ServiceDateCtrl'
+  });
+
+  $stateProvider.state('serviceitem', {
+      url: '/serviceitem',
+      templateUrl: 'templates/service-item.html',
+      controller: 'ServiceItemCtrl'
+  });
+
+  $stateProvider.state('serviceadvisor', {
+      url: '/serviceadvisor',
+      templateUrl: 'templates/service-advisor.html',
+      controller: 'ServiceAdvisorCtrl'
+  });
+
+  $stateProvider.state('companydetail', {
+      url: '/companydetail',
+      templateUrl: 'templates/company-detail.html',
+      controller: 'CompanyDetailCtrl'
+  });
+
+  $stateProvider.state('booking_confirmation', {
+      url: '/booking_confirmation',
+      templateUrl: 'templates/booking-confirmation.html',
+      controller: 'BookingConfirmationCtrl'
   });
 
   $stateProvider.state('scan', {
